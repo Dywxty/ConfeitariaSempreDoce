@@ -4,11 +4,11 @@
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
     scroll-behavior: smooth;
+    color: #b09842;
 }
-
 body {
-    background-color: #fff0f6;
-    color: #333;
+    background-color: #fff9dc;
+    color: #717171;
     line-height: 1.6;
 }
 
@@ -19,14 +19,10 @@ body {
 }
 
 header {
-    background-color: #ff6f91;
-    color: white;
+    background-color: #fff56f;
+    color: #b09842;
     padding: 20px 0;
-    border-bottom-left-radius: 80px 60px;
-    border-bottom-right-radius: 80px 60px;
-    border-top-left-radius: 40px 30px;
-    border-top-right-radius: 40px 30px;
-    box-shadow: 0 4px 24px #ffb6c1a0;
+    box-shadow: 0 4px 24px #ffeeb6a0;
 }
 
 header h1 {
@@ -41,7 +37,7 @@ nav {
 }
 
 nav a {
-    color: white;
+    color: #717171;
     text-decoration: none;
     margin: 0 15px;
     font-weight: 500;
@@ -60,13 +56,13 @@ nav ul li {
 nav ul li a:hover {
     text-decoration: underline;
     font-weight: bold;
-    color: palevioletred;
+    color: #b09842;
 }
 
 nav ul li a{    
     font-size: 1.1em;
     transition: color 0.3s ease;
-    color: #fff;
+    color: #717171;
 }
 
 /*Carrosel*/
@@ -81,6 +77,12 @@ nav ul li a{
     height: 100%;
     object-fit: cover;
     animation: fadeIn 1s ease-in-out;
+    border-bottom-left-radius: 80px 60px;
+    border-bottom-right-radius: 80px 60px;
+    border-radius: 5%;
+    box-shadow: 0 4px 24px #ffeeb6a0;
+    margin-bottom: 40px;
+
 }
 
 @keyframes fadeIn {
@@ -106,16 +108,113 @@ nav ul li a{
     text-align: center;
     margin: 20px 0;
     font-size: 2em;
-    color: #ff6f91;
+    color: #b09842;
 }
 
 .container p {
     font-size: 1.2em;
-    color: #555;
+    color: #717171;
     margin-top: 10px;
 }
 
 .sobre {
     font-family: 'Fira Sans', sans-serif !important;
     text-align: center;
+}
+
+/* Card para a seção Sobre */
+.sobre-card {
+    background: #fffbe7;
+    border-radius: 24px;
+    box-shadow: 0 2px 12px #efffb6a0;
+    padding: 32px 60px 28px 60px;
+    margin: 32px auto 40px auto;
+    max-width: 900px;
+    width: 95%;
+    text-align: center;
+    border: 2px solid #ffe26f;
+    transition: max-width 0.2s, padding 0.2s;
+}
+.sobre-card h2 {
+    color: #b09842;
+    font-size: 1.5em;
+    margin-bottom: 0.5em;
+    font-family: 'Grandstander', cursive;
+}
+.sobre-card p {
+    color: #717171;
+    font-size: 1em;
+}
+/* Título da seção cardápio centralizado e colorido */
+.menu-cardapio > h2 {
+    text-align: center;
+    color: #b09842;
+    font-size: 2em;
+    margin-bottom: 32px;
+    font-family: 'Grandstander', cursive;
+}
+/* Cards de produtos do cardápio */
+.menu-cardapio {
+    margin: 40px 0 60px 0;
+}
+.menu-cardapio .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.menu-cardapio-itens {
+    background: #fffbe7;
+    border-radius: 24px;
+    box-shadow: 0 2px 12px #fff8b6a0;
+    padding: 24px 28px 18px 28px;
+    margin: 18px 0;
+    max-width: 340px;
+    width: 100%;
+    text-align: center;
+    transition: transform 0.2s, box-shadow 0.2s;
+    border: 2px solid #fff56f;
+}
+.menu-cardapio-itens:hover {
+    transform: translateY(-6px) scale(1.03);
+    box-shadow: 0 8px 24px #ffeeb6cc;
+    border-color: #fff9b6;
+}
+.menu-cardapio-itens h3 {
+    color: #717171;
+    font-size: 1.3em;
+    margin-bottom: 0.5em;
+    font-family: 'Grandstander', cursive;
+}
+.menu-cardapio-itens p {
+    color: #717171;
+    font-size: 1em;
+}
+/* Grid para o menu */
+.menu-cardapio .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 32px;
+    justify-items: center;
+}
+@media (max-width: 700px) {
+    .menu-cardapio .container {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+    .menu-cardapio-itens {
+        max-width: 95vw;
+    }
+}
+
+/*Rodapé*/
+
+footer {
+    background-color: #fff36f;
+    color: #b09842;
+    text-align: center;
+    padding: 15px 0;
+    border-top-left-radius: 40px 30px;
+    border-top-right-radius: 40px 30px;
+    box-shadow: 0 -4px 24px #fff3b6a0;
+    margin-top: 40px;
 }
