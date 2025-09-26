@@ -1,8 +1,8 @@
 // Criar a lista de imagens
 const images = [
-    'assets/img/bolo-1.jpg',
-    'assets/img/bolo-2.jpg',
-    'assets/img/bolo-3.jpg'
+    'assets/img/1.jpg',
+    'assets/img/2.jpg',
+    'assets/img/3.jpg'
 ];
 
 let indiceImagemAtualListaImagens = 0
