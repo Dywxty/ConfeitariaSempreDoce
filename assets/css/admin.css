@@ -56,3 +56,14 @@ button {
 button:hover {
     background-color: #fff56f;
 }
+
+a {
+    text-decoration: none;
+    color: #717171;
+}
+
+a:hover {
+    text-decoration: underline;
+    font-weight: bold;
+    color: #fff56f;
+}
