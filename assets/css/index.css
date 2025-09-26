@@ -16,7 +16,19 @@ body {
     max-width: 150px;
     height: auto;
     padding: 10px;
-    
+}
+
+.link-admin {
+    text-decoration: none;
+    color: #717171;
+    position: absolute;
+    padding-right: 20px;
+}
+
+.link-admin:hover {
+    text-decoration: underline;
+    font-weight: bold;
+    color: #b09842;
 }
 
 .container {
