@@ -1,48 +1,85 @@
+/* Header flex container for logo and title */
+.header-flex {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.header-flex .logo {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.header-flex h1 {
+    margin: 0;
+    font-size: 2.5em;
+    color: var(--color-fontes);
+    text-align: center;
+}
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Poppins', 'Playfair Display', serif;
     scroll-behavior: smooth;
-    color: #b09842;
+    font-family: 'Rubik Bubbles';
+}
+
+:root {
+    --botoes: #866253;
+    --botoes-hover: #a67c52;
+    --fundo: #f9e2d5;
+    --color-fontes: #6f4300;
+    --color-fonts-hover: #9c6e3a;
+    --footer-e-header: #cdaa93;
 }
 body {
-    background-color: #fff9dc;
-    color: #717171;
+    background-color: var(--fundo);
+    color: var(--color-fontes);
     line-height: 1.6;
 }
 
 .logo img {
-    max-width: 150px;
+    max-width: 80px;
     height: auto;
-    padding: 10px;
+    padding: 4px 8px;
+    display: block;
+    margin-left: 0;
 }
 
+/* Botão login fixo no topo direito */
 .link-admin {
     text-decoration: none;
-    color: #717171;
-    position: absolute;
-    padding-right: 20px;
+    color: #fff;
+    background-color: var(--botoes);
+    position: fixed;
+    top: 24px;
+    right: 32px;
+    z-index: 1000;
+    padding: 12px 28px;
+    border-radius: 24px;
+    font-weight: 600;
+    font-size: 1.1em;
+    box-shadow: 0 2px 8px #0001;
+    transition: background 0.2s, color 0.2s;
+    border: none;
+    outline: none;
+    display: inline-block;
 }
 
 .link-admin:hover {
     text-decoration: underline;
-    font-weight: bold;
-    color: #b09842;
+    color: #fffbe7;
+    background-color: var(--botoes-hover);
 }
 
 .container {
     width: 80%;
     max-width: 1200px;
     margin: auto;
-}
-
-header {
-    display: flex;
-    background-color: #fff56f;
-    color: #b09842;
-    padding: 20px 0;
-    box-shadow: 0 4px 24px #ffeeb6a0;
 }
 
 header h1 {
@@ -57,7 +94,7 @@ nav {
 }
 
 nav a {
-    color: #717171;
+    color: var(--color-fontes);
     text-decoration: none;
     margin: 0 15px;
     font-weight: 500;
@@ -76,13 +113,13 @@ nav ul li {
 nav ul li a:hover {
     text-decoration: underline;
     font-weight: bold;
-    color: #b09842;
+    color: var(--color-fonts-hover);
 }
 
 nav ul li a{    
     font-size: 1.1em;
     transition: color 0.3s ease;
-    color: #717171;
+    color: var(--color-fontes);
 }
 
 /*Carrosel*/
@@ -128,12 +165,12 @@ nav ul li a{
     text-align: center;
     margin: 20px 0;
     font-size: 2em;
-    color: #b09842;
+    color: var(--color-fontes);
 }
 
 .container p {
     font-size: 1.2em;
-    color: #717171;
+    color: var(--color-fontes);
     margin-top: 10px;
 }
 
@@ -144,7 +181,7 @@ nav ul li a{
 
 /* Card para a seção Sobre */
 .sobre-card {
-    background: #fffbe7;
+    background: var(--fundo);
     border-radius: 24px;
     box-shadow: 0 2px 12px #efffb6a0;
     padding: 32px 60px 28px 60px;
@@ -152,23 +189,23 @@ nav ul li a{
     max-width: 900px;
     width: 95%;
     text-align: center;
-    border: 2px solid #ffe26f;
+    border: 2px solid #6f4300;
     transition: max-width 0.2s, padding 0.2s;
 }
 .sobre-card h2 {
-    color: #b09842;
+    color: var(--color-fontes);
     font-size: 1.5em;
     margin-bottom: 0.5em;
     font-family: 'Grandstander', cursive;
 }
 .sobre-card p {
-    color: #717171;
+    color: var(--color-fontes);
     font-size: 1em;
 }
 /* Título da seção cardápio centralizado e colorido */
 .menu-cardapio > h2 {
     text-align: center;
-    color: #b09842;
+    color: var(--color-fontes);
     font-size: 2em;
     margin-bottom: 32px;
     font-family: 'Grandstander', cursive;
@@ -183,7 +220,7 @@ nav ul li a{
     align-items: center;
 }
 .menu-cardapio-itens {
-    background: #fffbe7;
+    background: var(--fundo);
     border-radius: 24px;
     box-shadow: 0 2px 12px #fff8b6a0;
     padding: 24px 28px 18px 28px;
@@ -192,21 +229,20 @@ nav ul li a{
     width: 100%;
     text-align: center;
     transition: transform 0.2s, box-shadow 0.2s;
-    border: 2px solid #fff56f;
+    border: 2px solid #6f4300;
 }
 .menu-cardapio-itens:hover {
     transform: translateY(-6px) scale(1.03);
     box-shadow: 0 8px 24px #ffeeb6cc;
-    border-color: #fff9b6;
+    border-color: #6f4300;
 }
 .menu-cardapio-itens h3 {
-    color: #717171;
+    color: var(--color-fontes);
     font-size: 1.3em;
     margin-bottom: 0.5em;
-    font-family: 'Grandstander', cursive;
 }
 .menu-cardapio-itens p {
-    color: #717171;
+    color: var(--color-fontes);
     font-size: 1em;
 }
 /* Grid para o menu */
@@ -229,8 +265,8 @@ nav ul li a{
 /*Rodapé*/
 
 footer {
-    background-color: #fff36f;
-    color: #b09842;
+    background-color: var(--footer-e-header);
+    color: var(--color-fontes);
     text-align: center;
     padding: 15px 0;
     border-top-left-radius: 40px 30px;

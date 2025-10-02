@@ -1,0 +1,118 @@
+/* Reset e fontes */
+:root {
+    --botoes: #866253;
+    --botoes-hover: #a67c52;
+    --fundo: #fffdf7;
+    --fundo-gradiente: linear-gradient(135deg, #fffdf7 0%, #f5e7d4 100%);
+    --color-fontes: #6d4c2c;
+    --color-fonts-hover: #a67c52;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Rubik Bubbles';
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--fundo-gradiente);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: var(--color-fontes);
+}
+
+.login-container {
+    background: #fff;
+    padding: 40px 30px;
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(110, 80, 40, 0.08);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    border: 1.5px solid #e7d3b3;
+}
+
+.login-container h1 {
+    font-size: 32px;
+    color: var(--color-fontes);
+    margin-bottom: 30px;
+}
+
+.login-container form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.login-container label {
+    text-align: left;
+    font-weight: bold;
+    color: var(--color-fonts-hover);
+    font-size: 16px;
+}
+
+.login-container input {
+    padding: 10px 15px;
+    border-radius: 8px;
+    border: 1.5px solid #e7d3b3;
+    font-size: 16px;
+    color: var(--color-fontes);
+}
+
+.login-container button {
+    padding: 12px;
+    border-radius: 8px;
+    border: none;
+    background-color: var(--botoes);
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.login-container button:hover {
+    background-color: var(--botoes-hover);
+    transform: scale(1.05);
+}
+
+.login-container p {
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+.login-container p a {
+    color: var(--color-fonts-hover);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.login-container p a:hover {
+    text-decoration: underline;
+    color: var(--color-fontes);
+}
+
+/* Responsivo */
+@media(max-width: 480px) {
+    .login-container {
+        padding: 30px 20px;
+    }
+}
+
+.circulo-login {
+    width: 50px;
+    height: 50px;
+    margin: 20px auto 0 auto;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #fffdf7 0%, #f5e7d4 100%);
+    animation: girar 1s linear infinite;
+}
+
+@keyframes girar {
+    0% { transform: rotate(0deg);}
+    100% { transform: rotate(360deg);}
+}
