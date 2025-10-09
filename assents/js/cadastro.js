@@ -1,4 +1,4 @@
-console.log("cadastro.js carregado!");
+console.log("✅ cadastro.js carregado!");
 
 document.getElementById('form-cadastro').onsubmit = function (e) {
     e.preventDefault();
@@ -25,7 +25,7 @@ document.getElementById('form-cadastro').onsubmit = function (e) {
         return;
     }
 
-    // Se passou pela validação, salvar no localStorage
+    // ✅ Se passou pela validação, salvar no localStorage
     const usuarios = JSON.parse(localStorage.getItem('usuarios')) || [];
 
     // Verifica se o e-mail já está cadastrado
@@ -40,13 +40,13 @@ document.getElementById('form-cadastro').onsubmit = function (e) {
     usuarios.push({ nome, email, senha });
     localStorage.setItem('usuarios', JSON.stringify(usuarios));
 
-    // Mostra mensagem de sucesso
+    // ✅ Mostra mensagem de sucesso
     erro.style.display = 'none';
     sucesso.style.display = 'block';
     document.getElementById('form-cadastro').reset();
 };
 
-// Mostrar / ocultar senha
+// 👁️ Mostrar / ocultar senha
 document.getElementById('mostrar-senha').addEventListener('change', function () {
     const senha = document.getElementById('senha');
     const confirmarSenha = document.getElementById('confirmar-senha');

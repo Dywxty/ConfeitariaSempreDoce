@@ -16,11 +16,11 @@ document.getElementById('form-login').onsubmit = function(e) {
 
     setTimeout(function() {
         if (usuario) {
-            // Login correto: redireciona
+            // ✅ Login correto: redireciona
            
-            window.location.href = "../index.html";
+            window.location.href = "index.html";
         } else {
-            // Login incorreto: mostra mensagem
+            // ❌ Login incorreto: mostra mensagem
             circulo.style.display = 'none';
             btn.style.display = 'block';
 

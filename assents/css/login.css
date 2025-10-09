@@ -1,44 +1,33 @@
 /* Reset e fontes */
-:root {
-    --botoes: #866253;
-    --botoes-hover: #a67c52;
-    --fundo: #fffdf7;
-    --fundo-gradiente: linear-gradient(135deg, #fffdf7 0%, #f5e7d4 100%);
-    --color-fontes: #6d4c2c;
-    --color-fonts-hover: #a67c52;
-}
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Rubik Bubbles';
-    scroll-behavior: smooth;
+    font-family: "Rubik Bubbles", system-ui;
 }
 
 body {
-    background: var(--fundo-gradiente);
+    background: linear-gradient(135deg, #fffbe6, #ffe0b2);
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    color: var(--color-fontes);
 }
 
 .login-container {
     background: #fff;
     padding: 40px 30px;
-    border-radius: 16px;
-    box-shadow: 0 8px 20px rgba(110, 80, 40, 0.08);
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
     width: 100%;
     max-width: 400px;
     text-align: center;
-    border: 1.5px solid #e7d3b3;
 }
 
 .login-container h1 {
+    font-family: 'Playfair Display', serif;
     font-size: 32px;
-    color: var(--color-fontes);
+    color: #ff8000;
     margin-bottom: 30px;
 }
 
@@ -51,23 +40,22 @@ body {
 .login-container label {
     text-align: left;
     font-weight: bold;
-    color: var(--color-fonts-hover);
+    color: #7c4a00;
     font-size: 16px;
 }
 
 .login-container input {
     padding: 10px 15px;
     border-radius: 8px;
-    border: 1.5px solid #e7d3b3;
+    border: 1px solid #ccc;
     font-size: 16px;
-    color: var(--color-fontes);
 }
 
 .login-container button {
     padding: 12px;
     border-radius: 8px;
     border: none;
-    background-color: var(--botoes);
+    background-color: #ff8000;
     color: #fff;
     font-size: 18px;
     font-weight: bold;
@@ -76,7 +64,7 @@ body {
 }
 
 .login-container button:hover {
-    background-color: var(--botoes-hover);
+    background-color: #ffb347;
     transform: scale(1.05);
 }
 
@@ -86,14 +74,13 @@ body {
 }
 
 .login-container p a {
-    color: var(--color-fonts-hover);
+    color: #ff8000;
     text-decoration: none;
     font-weight: bold;
 }
 
 .login-container p a:hover {
     text-decoration: underline;
-    color: var(--color-fontes);
 }
 
 /* Responsivo */
@@ -108,7 +95,7 @@ body {
     height: 50px;
     margin: 20px auto 0 auto;
     border-radius: 50%;
-    background: linear-gradient(135deg, #fffdf7 0%, #f5e7d4 100%);
+    background: linear-gradient(135deg, #ffffff, #ae5700);
     animation: girar 1s linear infinite;
 }
 

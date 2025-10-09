@@ -1,0 +1,384 @@
+/* Reset e fontes */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Rubik Bubbles", system-ui;
+}
+
+body {
+    background-color: #fffbe6; /* Amarelo bem claro */
+    color: #333;
+}
+
+/* Container central */
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header */
+header {
+    background: linear-gradient(90deg, #ffb347, #ffcc70);
+    padding: 30px 0;
+    text-align: center;
+    color: #fff;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+header h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 50px;
+    color: #fffbe6;
+    margin-bottom: 20px;
+}
+
+/* Navegação centralizada */
+header nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center; /* centraliza horizontalmente */
+    gap: 30px; /* espaçamento entre os links */
+}
+
+header nav ul li {
+    margin: 0;
+}
+
+header nav a {
+    text-decoration: none;
+    color: #fffbe6;
+    font-weight: bold;
+    font-size: 20px;
+    transition: color 0.3s;
+}
+
+header nav a:hover {
+    color: #ff8000;
+    text-decoration: underline;
+}
+
+/* Responsivo: menu em coluna abaixo do título */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 36px;
+    }
+    header nav ul {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
+
+/* Carrossel */
+.Carrosel {
+    width: 100%;
+    height: 550px;
+    overflow: hidden;
+}
+
+#img-carrosel {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    animation: fadeIn 1s ease-in-out;
+    border-bottom: 5px solid #ffb347;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Seções */
+.container h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 36px;
+    color: #ff8000;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.container p {
+    font-size: 18px;
+    color: #333;
+    line-height: 1.6;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Sobre Nós */
+.sobre {
+    background: linear-gradient(135deg, #fffbe6 70%, #ffe0b2 100%);
+    padding: 49px;
+    border-radius: 18px;
+    box-shadow: 0 6px 18px rgba(255, 128, 0, 0.12);
+    text-align: center;
+    max-width: 950px;
+    margin: 0 auto 40px auto;
+    position: relative;
+    overflow: hidden;
+}
+
+.sobre h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 40px;
+    color: #ff8000;
+    margin-bottom: 25px;
+    letter-spacing: 2px;
+}
+
+.sobre p {
+    font-size: 20px;
+    color: #7c4a00;
+    line-height: 1.7;
+    margin-bottom: 18px;
+    background: rgba(255,255,255,0.7);
+    border-radius: 8px;
+    padding: 10px 0;
+    box-shadow: 0 2px 8px rgba(255, 187, 127, 0.08);
+}
+
+/* Detalhes decorativos */
+.sobre::before, .sobre::after {
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+    opacity: 0.18;
+}
+
+.sobre::before {
+    width: 120px;
+    height: 120px;
+    background: #ffcc70;
+    top: -40px;
+    left: -40px;
+}
+
+.sobre::after {
+    width: 90px;
+    height: 90px;
+    background: #ff8000;
+    bottom: -30px;
+    right: -30px;
+}
+
+/* Cardápio */
+.cardapio .produtos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin-top: 20px;
+}
+
+.produto {
+    background: #fff;
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.produto:hover {
+    transform: scale(1.05);
+}
+
+.produto img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.produto h3 {
+    font-size: 22px;
+    color: #ff8000;
+    margin-bottom: 10px;
+}
+
+.produto p {
+    font-size: 16px;
+    color: #555;
+}
+
+/* Depoimentos */
+.depoimentos-carrosel {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    padding: 30px;
+    max-width: 700px;
+    margin: 40px auto;
+    text-align: center;
+    position: relative;
+}
+
+.carrosel-depoimentos {
+    min-height: 120px;
+}
+
+.depoimento {
+    display: none;
+    font-size: 18px;
+    color: #333;
+    transition: opacity 0.5s;
+}
+
+.depoimento.ativo {
+    display: block;
+    opacity: 1;
+}
+
+.depoimento span {
+    display: block;
+    margin-top: 8px;
+    color: #ff8000;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.depo-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #ff8000;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    font-size: 22px;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.depo-btn.prev {
+    left: 10px;
+}
+
+.depo-btn.next {
+    right: 10px;
+}
+
+/* Footer */
+footer {
+    background-color: #ffb347;
+    color: #fff;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 30px;
+}
+
+/* Responsivo geral */
+@media (max-width: 1024px) {
+    .cardapio .produtos {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+    }
+    .Carrosel {
+        height: 250px;
+    }
+    #img-carrosel {
+        width: 100%;
+        height: 100%;
+    }
+    .cardapio .produtos {
+        grid-template-columns: 1fr;
+    }
+}
+/* ...existing code... */
+.contato {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    padding: 30px;
+    max-width: 500px;
+    margin: 40px auto;
+    text-align: center;
+}
+
+.contato h2 {
+    font-family: 'Playfair Display', serif;
+    color: #ff8000;
+    margin-bottom: 25px;
+}
+
+.contato form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contato label {
+    font-size: 16px;
+    color: #7c4a00;
+    text-align: left;
+}
+
+.contato input,
+.contato textarea {
+    padding: 10px;
+    border: 1px solid #ffbb7f;
+    border-radius: 6px;
+    font-size: 16px;
+}
+
+.contato button {
+    background-color: #ffbb7f;
+    color: #fff;
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.contato button:hover {
+    background-color: #ff8000;
+}
+
+/* Botões no canto superior direito */
+.header-botoes {
+    position: absolute;
+    top: 20px; /* distância do topo do header */
+    right: 30px; /* distância da direita */
+    display: flex;
+    gap: 10px;
+}
+
+.header-botoes a {
+    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-weight: bold;
+    font-size: 16px;
+    color: #fff;
+    background-color: #ff8000;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.header-botoes a:hover {
+    background-color: #ffb347;
+    transform: scale(1.05);
+}
+
+/* Responsivo: ajuste para mobile */
+@media (max-width: 768px) {
+    .header-botoes {
+        top: 10px;
+        right: 10px;
+        flex-direction: row;
+        gap: 8px;
+    }
+}
+
