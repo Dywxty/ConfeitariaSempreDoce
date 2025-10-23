@@ -1,9 +1,8 @@
-/* Reset e fontes */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Rubik Bubbles", system-ui;
+     font-family: "Comic Relief", system-ui;
 }
 
 body {
@@ -382,3 +381,19 @@ footer {
     }
 }
 
+button a{ 
+    text-decoration: none;
+    padding: 12px;
+    border-radius: 8px;
+    border: none;
+    background-color: #ff8000;
+    color: #fff;
+    font-size: 18px;
+    cursor: pointer;
+   
+}
+
+button:hover {
+    text-decoration: none;
+    background-color: #ffb347;
+}

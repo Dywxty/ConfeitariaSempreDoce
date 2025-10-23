@@ -8,13 +8,13 @@ function validarLogin() {
     const senha = document.getElementById("senha").value.trim();
     const erroMsg = document.getElementById("erro");
 
-    // Credenciais fixas
-    const crachaValido = "1234";     // Número do crachá específico
-    const senhaValida = "senaidev";  // Senha específica
+    // Credenciais fixas - teste
+    const crachaValido = "1234";     
+    const senhaValida = "senaidev";  
 
     // Verifica se os dados correspondem aos valores fixos
     if (cracha === crachaValido && senha === senhaValida) {
-        window.location.href = "../pages/home_admi.html";
+        window.location.href = "../pages/home_admin.html";
     } else { 
         erroMsg.textContent = "Crachá ou senha incorretos!";
     }

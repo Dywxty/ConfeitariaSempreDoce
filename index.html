@@ -5,10 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Confeitaria Sempre Doce</title>
     <link rel="stylesheet" href="../assents/css/index.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;900&family=Rubik+Bubbles&display=swap" rel="stylesheet">
+    
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Akaya+Kanadaka&family=Amaranth:ital,wght@0,400;0,700;1,400;1,700&family=Caveat:wght@400..700&family=Comic+Relief:wght@400;700&family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Gochi+Hand&family=Grandstander:ital,wght@0,100..900;1,100..900&family=Kaushan+Script&family=Oregano:ital@0;1&family=Share+Tech&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
 </head>
+
+<script>
+  // Verifica se o usuário está logado
+  if (localStorage.getItem('usuarioLogado') === 'true') {
+    document.getElementById('btnReserva').style.display = 'block';
+  }
+
+  // Redireciona para a página de reservas ao clicar
+  document.getElementById('btnReserva').addEventListener('click', function() {
+    window.location.href = 'pages/reserva.html';
+  });
+</script>
+
 <body>
 <header>
     
@@ -75,57 +90,27 @@
                     <h3>Bolo Red Velvet</h3>
                     <p>Clássico bolo Red Velvet com cream cheese frosting.</p>
                 </div>
-                <!-- Adicione dentro do .produtos -->
-<div class="produto">
-    <img src="assents/img/bolo de liamo.webp" alt="Bolo de Limão">
-    <h3>Bolo de Limão</h3>
-    <p>Bolo leve com cobertura de glacê de limão siciliano.</p>
-</div>
-<div class="produto">
-    <img src="assents/img/brigadeiro.jpg" alt="Brigadeiro Gourmet">
-    <h3>Brigadeiro Gourmet</h3>
-    <p>Brigadeiro feito com chocolate belga e confeitos especiais.</p>
-</div>
-<div class="produto">
-    <img src="assents/img/torta de maca.jpg" alt="Torta de Maçã">
-    <h3>Torta de Maçã</h3>
-    <p>Torta crocante recheada com maçãs frescas e canela.</p>
-</div>
-<div class="produto">
-    <img src="assents/img/cheesecake de fruta vermelhas.png" alt="Cheesecake de Frutas Vermelhas">
-    <h3>Cheesecake de Frutas Vermelhas</h3>
-    <p>Cheesecake cremoso com calda de frutas vermelhas.</p>
-</div>
-<div class="produto">
-    <img src="assents/img/palha italiana.webp" alt="Palha Italiana">
-    <h3>Palha Italiana</h3>
-    <p>Doce tradicional feito com brigadeiro e biscoito.</p>
-</div>
-<div class="produto">
-    <img src="assents/img/mousse de maracuja.webp" alt="Mousse de Maracujá">
-    <h3>Mousse de Maracujá</h3>
-    <p>Mousse leve e refrescante com polpa natural de maracujá.</p>
-</div>
-<div class="produto">
-    <img src="assents/img/bem casadi.jpg" alt="Bem Casado">
-    <h3>Bem Casado</h3>
-    <p>Doce clássico de festa com recheio de doce de leite.</p>
-</div>
-<div class="produto">
-    <img src="assents/img/QUINDIM.jpg" alt="Quindim">
-    <h3>Quindim</h3>
-    <p>Doce de gema e coco, com brilho irresistível.</p>
-</div>
-<div class="produto">
-    <img src="assents/img/cupcake.jpg" alt="cupcake">
-    <h3>Cupcake</h3>
-    <p>Um mini bolo Delicioso, de massa branca com recheio de sua preferencia </p>
-</div>
-<div>
-    
-</div>
+                <div class="produto">
+                    <img src="assents/img/bolo de liamo.webp" alt="Bolo de Limão">
+                    <h3>Bolo de Limão</h3>
+                    <p>Bolo leve com cobertura de glacê de limão siciliano.</p>
+                </div>
+                <div class="produto">
+                    <img src="assents/img/cheesecake de fruta vermelhas.png" alt="Cheesecake de Frutas Vermelhas">
+                    <h3>Cheesecake de Frutas Vermelhas</h3>
+                    <p>Cheesecake cremoso com calda de frutas vermelhas.</p>
+                </div>
+                <div class="produto">
+                    <img src="assents/img/cupcake.jpg" alt="cupcake">
+                    <h3>Cupcake</h3>
+                    <p>Um mini bolo Delicioso, de massa branca com recheio de sua preferencia </p>
+                </div>
+                <div>
+                    
+                </div>
             </div>
         </div>
+
     </section>
 
     <!-- Seção de Depoimentos de Clientes -->
@@ -147,6 +132,10 @@
     </div>
     <button class="depo-btn prev">&lt;</button>
     <button class="depo-btn next">&gt;</button>
+<br>
+    <!-- Reserva - botão -->
+    <button id="btnReserva"><a href="/pages/reserva.html">Fazer Reserva</a></button>
+    
 </section>
 
 <div class="contato">
