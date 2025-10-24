@@ -1,62 +1,28 @@
 document.getElementById('form-reserva').addEventListener('submit', function(e) {
   e.preventDefault();
 
+  const getValue = id => document.getElementById(id).value;
+
   const novaReserva = {
-    nome: document.getElementById('nome').value,
-    produto: document.getElementById('produto').value,
-    quantidade: parseInt(document.getElementById('quantidade').value, 10),
-    data: document.getElementById('data').value,
-    telefone: document.getElementById('telefone').value,
-    comentarios: document.getElementById('comentarios').value
+    nome: getValue('nome'),
+    produto: getValue('produto'),
+    quantidade: parseInt(getValue('quantidade'), 10),
+    data: getValue('data'),
+    telefone: getValue('telefone'),
+    comentarios: getValue('comentarios')
   };
 
-  // Recupera reservas existentes ou cria array vazio
-  let reservas = [];
-  try {
-    reservas = JSON.parse(localStorage.getItem('reservas')) || [];
-  } catch (e) {
-    reservas = [];
+  // Função para salvar no localStorage
+  function salvarReserva(chave) {
+    const reservas = JSON.parse(localStorage.getItem(chave)) || [];
+    reservas.push(novaReserva);
+    localStorage.setItem(chave, JSON.stringify(reservas));
   }
 
-  reservas.push(novaReserva);
-  localStorage.setItem('reservas', JSON.stringify(reservas));
+  salvarReserva('reservasUsuario');
+  salvarReserva('reservas'); // Para o admin
 
   document.getElementById('msg-sucesso').style.display = 'block';
   this.reset();
-
-  document.getElementById('form-reserva').addEventListener('submit', function(e) {
-  e.preventDefault();
-
-  const novaReserva = {
-    nome: document.getElementById('nome').value,
-    produto: document.getElementById('produto').value,
-    quantidade: parseInt(document.getElementById('quantidade').value, 10),
-    data: document.getElementById('data').value,
-    telefone: document.getElementById('telefone').value,
-    comentarios: document.getElementById('comentarios').value
-  };
-
-  // Salva no localStorage do usuário
-  let reservasUsuario = [];
-  try {
-    reservasUsuario = JSON.parse(localStorage.getItem('reservasUsuario')) || [];
-  } catch (e) {
-    reservasUsuario = [];
-  }
-  reservasUsuario.push(novaReserva);
-  localStorage.setItem('reservasUsuario', JSON.stringify(reservasUsuario));
-
-  // Salva no localStorage do admin
-  let reservasAdmin = [];
-  try {
-    reservasAdmin = JSON.parse(localStorage.getItem('reservas')) || [];
-  } catch (e) {
-    reservasAdmin = [];
-  }
-  reservasAdmin.push(novaReserva);
-  localStorage.setItem('reservas', JSON.stringify(reservasAdmin));
-
-  // Redireciona para a página de minhas reservas
   window.location.href = "minhas_reservas.html";
-});
 });
