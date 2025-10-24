@@ -4,7 +4,7 @@
 
 h1 {
     text-align: center;
-    color: #993366; /* vinho médio */
+    color: #993366; 
 }
 
 table {
@@ -22,18 +22,18 @@ th, td {
 
 /* Cor de fundo para linhas ímpares */
 tr:nth-child(odd) {
-    background-color: #993366; /* vinho médio */
+    background-color: #993366; 
     color: #fff;
 }
 
 /* Cor de fundo para linhas pares */
 tr:nth-child(even) {
-    background-color: #fdf9f9; /* branco suave */
-    color: #4A1428; /* vinho escuro */
+    background-color: #fdf9f9; 
+    color: #4A1428; 
 }
 
 /* Destacar a linha quando passar o mouse */
 tr:hover {
-    background-color: #C87896; /* vinho claro */
+    background-color: #C87896; 
     color: #fff;
 }

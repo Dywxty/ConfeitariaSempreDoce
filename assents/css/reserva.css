@@ -11,6 +11,8 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background: linear-gradient(135deg, #fdf9f9, #C87896); 
+
 }
 
 form#form-reserva {
@@ -19,10 +21,10 @@ form#form-reserva {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background: #fdf9f9; /* branco suave */
+    background: #fdf9f9; 
     padding: 32px 24px;
     border-radius: 12px;
-    box-shadow: 0 2px 12px rgba(74, 20, 40, 0.1); /* sombra vinho escuro */
+    box-shadow: 0 2px 12px rgba(74, 20, 40, 0.1);
 }
 
 form#form-reserva input,
@@ -31,18 +33,18 @@ form#form-reserva textarea {
     max-width: 300px;
     box-sizing: border-box;
     margin-bottom: 12px;
-    border: 1px solid #C87896; /* vinho claro */
+    border: 1px solid #C87896; 
     border-radius: 5px;
     padding: 10px 15px;
     background-color: #fff;
-    color: #4A1428; /* vinho escuro */
+    color: #4A1428; 
 }
 
 form#form-reserva button {
     width: 100%;
     max-width: 300px;
     padding: 12px;
-    background-color: #993366; /* vinho médio */
+    background-color: #993366; 
     color: #fff;
     font-weight: bold;
     border: none;
@@ -52,6 +54,6 @@ form#form-reserva button {
 }
 
 form#form-reserva button:hover {
-    background-color: #C87896; /* vinho claro */
+    background-color: #C87896; 
     transform: scale(1.05);
 }
