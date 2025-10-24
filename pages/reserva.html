@@ -4,31 +4,49 @@
   <meta charset="UTF-8">
   <title>Reserva de Produto - Sempre Doce</title>
   <link rel="stylesheet" href="../assents/css/index.css">
+  <link rel="stylesheet" href="../assents/css/reserva.css">
 </head>
 <body>
   <h2>Solicitar Reserva de Produto</h2>
   <form id="form-reserva">
-    <label for="nome">Nome do Cliente:</label>
-    <input type="text" id="nome" required>
+    
+    <input for="nome" type="text" id="nome" placeholder="Nome do Ciente" required>
 
-    <label for="produto">Produto:</label>
-    <input type="text" id="produto" required>
+    <br>
+    <br>
 
-    <label for="quantidade">Quantidade (unidades):</label>
-    <input type="number" id="quantidade" min="1" required>
+    <input for="produto" type="text" id="produto" placeholder="Produto" required>
 
-    <label for="data">Data da Retirada:</label>
-    <input type="date" id="data" required>
+    <br>
+    <br>
 
-    <label for="telefone">Telefone:</label>
-    <input type="tel" id="telefone" required>
+    <input for="quantidade" type="number" id="quantidade" min="1" placeholder="Quantidade (unidades)" required>
 
-    <label for="comentarios">Comentários Adicionais:</label>
-    <textarea id="comentarios"></textarea>
+    <br>
+    <br>
+    
+    <input for="data" type="date" id="data" placeholder="Data da Retirada" required>
 
-    <button type="submit">Reservar</button>
+    <br>
+    <br>
+
+    <input for="telefone" type="tel" id="telefone" placeholder="Telefone" required>
+
+    <br>
+    <br>
+    
+    <textarea for="comentarios" id="comentarios" placeholder="Comentários Adicionais"></textarea>
+
+    <br>
+    <br>
+    
+    <button type="submit" id="reserva-btn">Reservar</button>
+    <br><br>
+    <a href="minhas_reservas.html">Ver minhas reservas</a>
   </form>
   <div id="msg-sucesso" style="display:none; color:green;">Reserva realizada com sucesso!</div>
+
+
   <script src="../assents/js/reserva.js"></script>
 </body>
 </html>

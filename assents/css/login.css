@@ -3,11 +3,11 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-     font-family: "Comic Relief", system-ui;
+    font-family: "Comic Relief", system-ui;
 }
 
 body {
-    background: linear-gradient(135deg, #fffbe6, #ffe0b2);
+    background: linear-gradient(135deg, #fdf9f9, #C87896); /* branco suave para vinho claro */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -27,7 +27,7 @@ body {
 .login-container h1 {
     font-family: 'Playfair Display', serif;
     font-size: 32px;
-    color: #ff8000;
+    color: #993366; /* vinho médio */
     margin-bottom: 30px;
 }
 
@@ -40,14 +40,14 @@ body {
 .login-container label {
     text-align: left;
     font-weight: bold;
-    color: #7c4a00;
+    color: #4A1428; /* vinho escuro */
     font-size: 16px;
 }
 
 .login-container input {
     padding: 10px 15px;
     border-radius: 8px;
-    border: 1px solid #ccc;
+    border: 1px solid #C87896; /* vinho claro */
     font-size: 16px;
 }
 
@@ -55,7 +55,7 @@ body {
     padding: 12px;
     border-radius: 8px;
     border: none;
-    background-color: #ff8000;
+    background-color: #993366; /* vinho médio */
     color: #fff;
     font-size: 18px;
     font-weight: bold;
@@ -64,7 +64,7 @@ body {
 }
 
 .login-container button:hover {
-    background-color: #ffb347;
+    background-color: #C87896; /* vinho claro */
     transform: scale(1.05);
 }
 
@@ -74,7 +74,7 @@ body {
 }
 
 .login-container p a {
-    color: #ff8000;
+    color: #993366; /* vinho médio */
     text-decoration: none;
     font-weight: bold;
 }
@@ -95,7 +95,7 @@ body {
     height: 50px;
     margin: 20px auto 0 auto;
     border-radius: 50%;
-    background: linear-gradient(135deg, #ffffff, #ae5700);
+    background: linear-gradient(135deg, #ffffff, #993366); /* branco para vinho médio */
     animation: girar 1s linear infinite;
 }
 

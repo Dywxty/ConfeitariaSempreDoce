@@ -1,12 +1,11 @@
-*{
-     font-family: "Comic Relief", system-ui;
+* {
+    font-family: "Comic Relief", system-ui;
 }
 
-h1{
+h1 {
     text-align: center;
-    color: #7a0343;
+    color: #993366; /* vinho médio */
 }
-
 
 table {
     border-collapse: collapse;
@@ -17,22 +16,24 @@ table {
 }
 
 th, td {
-   border: 2px solid #000000;
-   padding: 15px;
+    border: 2px solid #000000;
+    padding: 15px;
 }
 
-/* Cor de fundo para linhas impares */
+/* Cor de fundo para linhas ímpares */
 tr:nth-child(odd) {
-    background-color: #7a0343;
+    background-color: #993366; /* vinho médio */
+    color: #fff;
 }
 
 /* Cor de fundo para linhas pares */
 tr:nth-child(even) {
-    background-color: #c7c7c7;
+    background-color: #fdf9f9; /* branco suave */
+    color: #4A1428; /* vinho escuro */
 }
 
 /* Destacar a linha quando passar o mouse */
 tr:hover {
-    background-color: #acebbc;
+    background-color: #C87896; /* vinho claro */
+    color: #fff;
 }
-

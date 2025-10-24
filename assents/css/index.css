@@ -2,12 +2,12 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-     font-family: "Comic Relief", system-ui;
+    font-family: "Comic Relief", system-ui;
 }
 
 body {
-    background-color: #fffbe6; /* Amarelo bem claro */
-    color: #333;
+    background-color: #fdf9f9;
+    color: #4A1428;
 }
 
 /* Container central */
@@ -19,7 +19,7 @@ body {
 
 /* Header */
 header {
-    background: linear-gradient(90deg, #ffb347, #ffcc70);
+    background: linear-gradient(90deg, #800020, #993366);
     padding: 30px 0;
     text-align: center;
     color: #fff;
@@ -29,7 +29,7 @@ header {
 header h1 {
     font-family: 'Playfair Display', serif;
     font-size: 50px;
-    color: #fffbe6;
+    color: #fdf9f9;
     margin-bottom: 20px;
 }
 
@@ -39,8 +39,8 @@ header nav ul {
     padding: 0;
     margin: 0;
     display: flex;
-    justify-content: center; /* centraliza horizontalmente */
-    gap: 30px; /* espaçamento entre os links */
+    justify-content: center;
+    gap: 30px;
 }
 
 header nav ul li {
@@ -49,14 +49,14 @@ header nav ul li {
 
 header nav a {
     text-decoration: none;
-    color: #fffbe6;
+    color: #fdf9f9;
     font-weight: bold;
     font-size: 20px;
     transition: color 0.3s;
 }
 
 header nav a:hover {
-    color: #ff8000;
+    color: #C87896;
     text-decoration: underline;
 }
 
@@ -83,7 +83,7 @@ header nav a:hover {
     height: 100%;
     object-fit: cover;
     animation: fadeIn 1s ease-in-out;
-    border-bottom: 5px solid #ffb347;
+    border-bottom: 5px solid #800020;
 }
 
 @keyframes fadeIn {
@@ -95,14 +95,14 @@ header nav a:hover {
 .container h2 {
     font-family: 'Playfair Display', serif;
     font-size: 36px;
-    color: #ff8000;
+    color: #800020;
     margin-bottom: 20px;
     text-align: center;
 }
 
 .container p {
     font-size: 18px;
-    color: #333;
+    color: #4A1428;
     line-height: 1.6;
     text-align: center;
     margin-bottom: 20px;
@@ -110,10 +110,10 @@ header nav a:hover {
 
 /* Sobre Nós */
 .sobre {
-    background: linear-gradient(135deg, #fffbe6 70%, #ffe0b2 100%);
+    background: linear-gradient(135deg, #fdf9f9 70%, #C87896 100%);
     padding: 49px;
     border-radius: 18px;
-    box-shadow: 0 6px 18px rgba(255, 128, 0, 0.12);
+    box-shadow: 0 6px 18px rgba(128, 0, 32, 0.12);
     text-align: center;
     max-width: 950px;
     margin: 0 auto 40px auto;
@@ -124,20 +124,20 @@ header nav a:hover {
 .sobre h2 {
     font-family: 'Playfair Display', serif;
     font-size: 40px;
-    color: #ff8000;
+    color: #800020;
     margin-bottom: 25px;
     letter-spacing: 2px;
 }
 
 .sobre p {
     font-size: 20px;
-    color: #7c4a00;
+    color: #4A1428;
     line-height: 1.7;
     margin-bottom: 18px;
     background: rgba(255,255,255,0.7);
     border-radius: 8px;
     padding: 10px 0;
-    box-shadow: 0 2px 8px rgba(255, 187, 127, 0.08);
+    box-shadow: 0 2px 8px rgba(153, 51, 102, 0.08);
 }
 
 /* Detalhes decorativos */
@@ -151,7 +151,7 @@ header nav a:hover {
 .sobre::before {
     width: 120px;
     height: 120px;
-    background: #ffcc70;
+    background: #993366;
     top: -40px;
     left: -40px;
 }
@@ -159,7 +159,7 @@ header nav a:hover {
 .sobre::after {
     width: 90px;
     height: 90px;
-    background: #ff8000;
+    background: #800020;
     bottom: -30px;
     right: -30px;
 }
@@ -195,7 +195,7 @@ header nav a:hover {
 
 .produto h3 {
     font-size: 22px;
-    color: #ff8000;
+    color: #993366;
     margin-bottom: 10px;
 }
 
@@ -223,7 +223,7 @@ header nav a:hover {
 .depoimento {
     display: none;
     font-size: 18px;
-    color: #333;
+    color: #4A1428;
     transition: opacity 0.5s;
 }
 
@@ -235,7 +235,7 @@ header nav a:hover {
 .depoimento span {
     display: block;
     margin-top: 8px;
-    color: #ff8000;
+    color: #993366;
     font-weight: bold;
     font-size: 16px;
 }
@@ -244,7 +244,7 @@ header nav a:hover {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background: #ff8000;
+    background: #800020;
     color: #fff;
     border: none;
     border-radius: 50%;
@@ -265,7 +265,7 @@ header nav a:hover {
 
 /* Footer */
 footer {
-    background-color: #ffb347;
+    background-color: #800020;
     color: #fff;
     text-align: center;
     padding: 15px 0;
@@ -294,7 +294,8 @@ footer {
         grid-template-columns: 1fr;
     }
 }
-/* ...existing code... */
+
+/* Contato */
 .contato {
     background: #fff;
     border-radius: 12px;
@@ -307,7 +308,7 @@ footer {
 
 .contato h2 {
     font-family: 'Playfair Display', serif;
-    color: #ff8000;
+    color: #993366;
     margin-bottom: 25px;
 }
 
@@ -319,20 +320,20 @@ footer {
 
 .contato label {
     font-size: 16px;
-    color: #7c4a00;
+    color: #4A1428;
     text-align: left;
 }
 
 .contato input,
 .contato textarea {
     padding: 10px;
-    border: 1px solid #ffbb7f;
+    border: 1px solid #C87896;
     border-radius: 6px;
     font-size: 16px;
 }
 
 .contato button {
-    background-color: #ffbb7f;
+    background-color: #993366;
     color: #fff;
     border: none;
     padding: 12px;
@@ -343,14 +344,14 @@ footer {
 }
 
 .contato button:hover {
-    background-color: #ff8000;
+    background-color: #800020;
 }
 
 /* Botões no canto superior direito */
 .header-botoes {
     position: absolute;
-    top: 20px; /* distância do topo do header */
-    right: 30px; /* distância da direita */
+    top: 20px;
+    right: 30px;
     display: flex;
     gap: 10px;
 }
@@ -362,12 +363,12 @@ footer {
     font-weight: bold;
     font-size: 16px;
     color: #fff;
-    background-color: #ff8000;
+    background-color: #993366;
     transition: background-color 0.3s, transform 0.2s;
 }
 
 .header-botoes a:hover {
-    background-color: #ffb347;
+    background-color: #C87896;
     transform: scale(1.05);
 }
 
@@ -386,14 +387,29 @@ button a{
     padding: 12px;
     border-radius: 8px;
     border: none;
-    background-color: #ff8000;
+    background-color: #993366;
     color: #fff;
     font-size: 18px;
     cursor: pointer;
-   
 }
 
 button:hover {
     text-decoration: none;
-    background-color: #ffb347;
+    background-color: #C87896;
+}
+
+#reserva-btn{
+    text-decoration: none;
+    padding: 12px;
+    border-radius: 8px;
+    border: none;
+    background-color: #993366;
+    color: #fff;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+#reserva-btn:hover{
+    text-decoration: none;
+    background-color: #C87896;
 }
